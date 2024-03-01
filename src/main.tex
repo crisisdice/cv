@@ -1,26 +1,60 @@
+\documentclass[11pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage{multicol}
+\setlength{\columnsep}{0mm}
+%----------------------------------------------------------------------------------------
+\usepackage{lipsum}  
+\usepackage{subfiles}                       % File importing
 
-\documentclass[letterpaper,11pt]{article}
-
-\def\theme{MidnightBlue}
-
-\usepackage{cv}
-\pagestyle{empty}
 
 \begin{document}
 
-% Heading
-\headinginline{Alexander Daily}{
-    \email{alexander.daily@campus.tu-berlin.de}
-    \github{crisisdice}
-}
+%----------------------------------------------------------------------------------------
+%	TITLE AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
 
-% Body
+\begin{minipage}[t]{0.4\textwidth} 
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Alexander Daily}}}} % First name
+	
+	\vspace{6pt}
+	
+	{\Large Software Engineer} % Career or current job title
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth} % 27% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	\icon{Envelope}{11}{\href{mailto:alexanderdaily001@gmail.com}{alexanderdaily001@gmail.com}}\\	
+    \icon{MapMarker}{11}{Berlin, Germany}\\
+    \icon{Github}{11}{\href{https://github.com/crisisdice}{github.com/crisisdice}}\\
+    \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com}{/in/alexander-daily-a786a2108}}\\    
+    
+\end{minipage}
 
-\import{sections/}{introduction.tex}
+
+    \cvsect{Summary}
+  Problem solver with 5 years of professional development experience. Experience in taking a product from MVP to a robust and scalable solution.\\
+	\vspace{-8pt}
+
+    \cvsect{Skills}
+    \vspace{-6pt}
+
+\begin{entrylist}
+      \entry 
+      {Languages:}
+      {C\#, Rust, SQL, Python, JS/TS, HTML}
+      {}
+      {}
+      \entry 
+      {Technologies:}
+      {Docker, Kubernetes, AWS, Azure, Redis, MongoDB}
+      {}
+      {}
+\end{entrylist}
+    
 \import{sections/}{experience.tex}
 \import{sections/}{education.tex}
-\import{sections/}{competencies.tex}
-\import{sections/}{volunteer.tex}
-% \import{sections/}{photograph.tex}
+
 
 \end{document}
